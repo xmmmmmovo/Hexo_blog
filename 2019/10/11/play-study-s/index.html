@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
+    <meta name="keywords" content="play,java">
     <meta name="description" content="悲伤的play framework + MySQL配置过程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="playframework初涉-2.配置MySQL并测试">
@@ -46,8 +46,10 @@
 <meta property="og:image" content="http://blog.fivezha.cn/2019/10/11/play-study-s/pic/succ.jpg">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/10/11/play-study-s/pic/sqlin.jpg">
 <meta property="article:published_time" content="2019-10-10T16:14:27.000Z">
-<meta property="article:modified_time" content="2019-10-12T12:22:42.839Z">
+<meta property="article:modified_time" content="2020-07-11T13:37:42.813Z">
 <meta property="article:author" content="xmmmmmovo">
+<meta property="article:tag" content="play">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://blog.fivezha.cn/2019/10/11/play-study-s/pic/mysql8.jpg">
     
@@ -106,7 +108,7 @@
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                Categories
+                分类
               </a>
             </li>
         
@@ -165,7 +167,7 @@
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/play-framework/">play framework</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
 
             
         </h5>
@@ -196,7 +198,7 @@
             <time class="post-time" title="2019-10-11 00:14:27" datetime="2019-10-10T16:14:27.000Z"  itemprop="datePublished">2019-10-11</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/play-framework/">play framework</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
 
 
 
@@ -212,52 +214,171 @@
 <a id="more"></a>
 
 <h3 id="因为playframework版本太低卸载mysql8"><a href="#因为playframework版本太低卸载mysql8" class="headerlink" title="因为playframework版本太低卸载mysql8"></a>因为playframework版本太低卸载mysql8</h3><p>首先有一件很悲伤的消息，下面这个版本</p>
-<p><img src="pic/mysql8.jpg" alt="mysql8"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/mysql8.jpg" alt="mysql8" title="">
+                </div>
+                <div class="image-caption">mysql8</div>
+            </figure>
+
 <p>，因为play版本过低，无法完全兼容，需要降级到mysql5的版本，如果已经安装，那么可以以<strong>管理员启动</strong>命令行</p>
-<p><img src="pic/cmdmaster.jpg" alt="cmd"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/cmdmaster.jpg" alt="cmd" title="">
+                </div>
+                <div class="image-caption">cmd</div>
+            </figure>
+
 <p><strong>然后先输入(前提是已经配置过mysql到环境变量 否则请到mysql文件夹中再执行)</strong></p>
 <p><strong><code>net stop mysql</code></strong></p>
 <p><strong><code>mysqld --remove</code></strong></p>
-<p><img src="pic/realremove.jpg" alt="real remove"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/realremove.jpg" alt="real remove" title="">
+                </div>
+                <div class="image-caption">real remove</div>
+            </figure>
+
 <p> 之后整个删除整个<code>mysql-8.0.12-winx64</code>版本</p>
 <h3 id="然后安装MySQL5-7版本-地下群群文件里有"><a href="#然后安装MySQL5-7版本-地下群群文件里有" class="headerlink" title="然后安装MySQL5.7版本(地下群群文件里有)"></a>然后安装MySQL5.7版本(地下群群文件里有)</h3><p><strong>基本是一路next就可以了</strong></p>
 <p><a href="https://blog.csdn.net/s_x123456/article/details/86754486?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener"><strong>这里也给个安装的教程</strong></a></p>
 <p>下面几项注意下</p>
 <p>这里选custom安装</p>
-<p><img src="pic/complete.jpg" alt="complete"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/complete.jpg" alt="complete" title="">
+                </div>
+                <div class="image-caption">complete</div>
+            </figure>
+
 <p>这里选添加到环境变量</p>
-<p><img src="pic/main.jpg" alt="main"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/main.jpg" alt="main" title="">
+                </div>
+                <div class="image-caption">main</div>
+            </figure>
+
 <p>设定登录密码</p>
-<p><img src="pic/login.jpg" alt="login"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/login.jpg" alt="login" title="">
+                </div>
+                <div class="image-caption">login</div>
+            </figure>
+
 <p>这里务必选择utf8编码</p>
-<p><img src="pic/utf8.jpg" alt="utf-8"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/utf8.jpg" alt="utf-8" title="">
+                </div>
+                <div class="image-caption">utf-8</div>
+            </figure>
+
 <p>大概就是这些，最后一路next到底就行了，经过漫长的等待，可能会让你重启，重启就可以了</p>
 <p><strong>注：如果无响应，那就直接关了然后再打开安装文件，选择repair选项，完成之后重启</strong></p>
-<p><img src="pic/repair.jpg" alt="repair"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/repair.jpg" alt="repair" title="">
+                </div>
+                <div class="image-caption">repair</div>
+            </figure>
+
 <p>重启之后再以<strong>管理员打开</strong>命令提示行，执行下面两行语句</p>
 <p><code>mysqld -install</code></p>
 <p><code>net start mysql</code></p>
-<p><img src="pic/start.jpg" alt="start"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/start.jpg" alt="start" title="">
+                </div>
+                <div class="image-caption">start</div>
+            </figure>
+
 <p>此时，便可以输入<code>mysql -u root</code>进入数据库了</p>
 <p>不过这个开始时没有密码的，你需要输入以下两行更新密码</p>
 <p><strong><code>set password for &#39;root&#39;@&#39;localhost&#39;=password(&#39;123456&#39;);</code>注：password()里面的就是你设定的密码</strong></p>
 <p><strong><code>flush privileges;</code>这一步是更新权限</strong></p>
-<p><img src="pic/password.jpg" alt="change password"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/password.jpg" alt="change password" title="">
+                </div>
+                <div class="image-caption">change password</div>
+            </figure>
+
 <p>好了 这样你的数据库便配置完成了</p>
 <p>然后新建一个database(mysql里的database等同于于scheme)</p>
 <p><strong><code>create database test;</code>(test是你新建数据库的名字 随便写)</strong></p>
-<p><img src="pic/database.jpg" alt="database"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/database.jpg" alt="database" title="">
+                </div>
+                <div class="image-caption">database</div>
+            </figure>
+
 <p>此时回到play你新建的app中在application.conf中设置mysql</p>
-<p><img src="pic/setting.jpg" alt="setting"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/setting.jpg" alt="setting" title="">
+                </div>
+                <div class="image-caption">setting</div>
+            </figure>
+
 <p>如果你跟我做的一样，那么应该是下面这样:</p>
-<p><img src="pic/setting2.jpg" alt="setting2"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/setting2.jpg" alt="setting2" title="">
+                </div>
+                <div class="image-caption">setting2</div>
+            </figure>
+
 <p>随后编写测试程序</p>
-<p><img src="pic/user.jpg" alt="user"></p>
-<p><img src="pic/test.jpg" alt="test"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/user.jpg" alt="user" title="">
+                </div>
+                <div class="image-caption">user</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/test.jpg" alt="test" title="">
+                </div>
+                <div class="image-caption">test</div>
+            </figure>
+
 <p>运行app，访问网址后，看到有正常输出</p>
-<p><img src="pic/succ.jpg" alt="success"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/succ.jpg" alt="success" title="">
+                </div>
+                <div class="image-caption">success</div>
+            </figure>
+
 <p>且数据库中有东西</p>
-<p><img src="pic/sqlin.jpg" alt="sql"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/sqlin.jpg" alt="sql" title="">
+                </div>
+                <div class="image-caption">sql</div>
+            </figure>
+
 <p>那么则说明配置成功了。</p>
 
         </div>
@@ -267,7 +388,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-10-12T12:22:42.839Z" itemprop="dateUpdated">2019-10-12 20:22:42</time>
+    最后更新时间：<time datetime="2020-07-11T13:37:42.813Z" itemprop="dateUpdated">2020-07-11 21:37:42</time>
 </span><br>
 
 
@@ -293,6 +414,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/play/" rel="tag">play</a></li></ul>
+
 
             
 <div class="page-share-wrap">

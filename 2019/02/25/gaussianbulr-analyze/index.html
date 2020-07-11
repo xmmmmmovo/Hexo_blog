@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
+    <meta name="keywords" content="cv,c++">
     <meta name="description" content="因为实验室假期需要写一篇关于opencv的作业 所以顺便看了一下opencv(版本3.2.0)里面关于高斯模糊的源码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="opencv中高斯模糊(滤波器)的源码解析(c++版)">
@@ -30,9 +30,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%A32.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0.png">
-<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%AE%8F%E5%AE%9A%E4%B9%89.png">
-<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%AE%8F%E5%AE%9A%E4%B9%892.png">
-<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/WIN32.png">
+<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%AE%8F%E5%AE%9A%E4%B9%892.png)%3Cbr%3E%E8%BF%99%E9%87%8C%E5%8F%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AE%8F%E7%BB%84%E6%88%90%E7%9A%84%E7%94%A8%E4%BB%A5%E5%AE%9A%E4%B9%89%60CV_EXPORTS%60%E7%9A%84%E5%AE%8F%E7%BB%84%EF%BC%8C%E8%BF%99%E4%B8%80%E6%AE%B5%E5%85%B6%E5%AE%9E%E5%B0%B1%E6%98%AF%E7%B1%BB%E4%BC%BC%E4%BA%8E%60if">
+<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/WIN32.png)%3Cbr%3E%E5%86%8D%E6%9F%A5%E6%89%BE%E5%89%8D%E5%90%8E%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E7%9A%84%E5%AD%97%E6%AE%B5%EF%BC%8C%E7%BB%A7%E8%80%8C%E5%8F%91%E7%8E%B0%60WIN32%60%E6%98%AF**%E5%8F%AA%E8%A6%81%E5%8C%85%E5%90%AB%E4%BA%86">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%8D%B7%E7%A7%AF.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E6%89%BE1.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%87%BD%E6%95%B01.png">
@@ -40,8 +39,10 @@
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%87%BD%E6%95%B03.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/bin.png">
 <meta property="article:published_time" content="2019-02-25T11:40:25.000Z">
-<meta property="article:modified_time" content="2019-10-10T16:37:27.870Z">
+<meta property="article:modified_time" content="2020-07-11T13:34:51.677Z">
 <meta property="article:author" content="xmmmmmovo">
+<meta property="article:tag" content="cv">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%A32.png">
     
@@ -100,7 +101,7 @@
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                Categories
+                分类
               </a>
             </li>
         
@@ -159,7 +160,7 @@
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cv/">cv</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
 
             
         </h5>
@@ -190,7 +191,7 @@
             <time class="post-time" title="2019-02-25 19:40:25" datetime="2019-02-25T11:40:25.000Z"  itemprop="datePublished">2019-02-25</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cv/">cv</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
 
 
 
@@ -207,17 +208,43 @@
 
 <h2 id="分析函数接口"><a href="#分析函数接口" class="headerlink" title="分析函数接口"></a>分析函数接口</h2><p>首先，在下用的是vs版本的opencv，是直接编译好给你静态库(.lib)文件的，所以当我按住<code>ctrl</code>寻找<code>GaussianBlur</code>这个函数时 只发现了其在<code>imgproc.hpp</code>里面提供给你的接口。</p>
 <p>大概是下面这个样子的:</p>
-<p><img src="pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%A32.png" alt="高斯模糊函数接口1"></p>
-<p><img src="pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0.png" alt="高斯模糊函数接口2"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/高斯函数接口2.png" alt="高斯模糊函数接口1" title="">
+                </div>
+                <div class="image-caption">高斯模糊函数接口1</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/高斯函数.png" alt="高斯模糊函数接口2" title="">
+                </div>
+                <div class="image-caption">高斯模糊函数接口2</div>
+            </figure>
+
 <blockquote>
 <p>该函数将源图像与指定的卷积核进行卷积。并且支持原图像直接进行滤波操作。</p>
 </blockquote>
 <p>可以看到这个函数接口主要由四个部分组成:</p>
 <ol>
-<li><code>CV_EXPORTS_W</code><br>继续往上找 可以发现这是一个宏定义<br><img src="pic/%E5%AE%8F%E5%AE%9A%E4%B9%89.png" alt="宏定义1"><br>可以发现 这个宏定义是在<strong>编译阶段</strong>将<code>CV_EXPORTS</code>替换为了<code>CV_EXPORTS_W</code>再向上查找 会发现<br><img src="pic/%E5%AE%8F%E5%AE%9A%E4%B9%892.png" alt="宏定义2"><br>这里又是一个宏组成的用以定义<code>CV_EXPORTS</code>的宏组，这一段其实就是类似于<code>if else</code>的结构，主要的作用机理便是<strong>适配各类环境(操作系统)</strong> 。从中，我们这里又分成了三个部分进行解析:<ol>
+<li><code>CV_EXPORTS_W</code><br>继续往上找 可以发现这是一个宏定义<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/宏定义2.png)<br>这里又是一个宏组成的用以定义`CV_EXPORTS`的宏组，这一段其实就是类似于`if" alt="宏定义1](pic/宏定义.png)<br>可以发现 这个宏定义是在**编译阶段**将`CV_EXPORTS`替换为了`CV_EXPORTS_W`再向上查找 会发现<br>![宏定义2" title="else`的结构，主要的作用机理便是**适配各类环境(操作系统">
+                </div>
+                <div class="image-caption">else`的结构，主要的作用机理便是**适配各类环境(操作系统</div>
+            </figure>** 。从中，我们这里又分成了三个部分进行解析:<ol>
 <li><code>#if (defined WIN32 || defined _WIN32 || defined WINCE || defined __CYGWIN__) &amp;&amp; defined CVAPI_EXPORTS</code><br>可以看到，这里判断了两个表达式的逻辑与(<code>(defined WIN32 || defined _WIN32 || defined WINCE || defined __CYGWIN__)</code>和<code>defined CVAPI_EXPORTS</code>)<ol>
 <li>首先，<code>defined</code>的意义在于寻找后面的字段是否已经被宏定义过。</li>
-<li>其次，观察第一个表达式，发现<code>_WIN32</code> 在之前已经被定义过了，通过查阅<a href="https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=vs-2017" target="_blank" rel="noopener">微软官方宏定义文档</a>发现这个字段作用是基于编译器一个信号，表明是Windows环境下编译及运行的程序。<br><img src="pic/WIN32.png" alt="WIN"><br>再查找前后未定义过的字段，继而发现<code>WIN32</code>是<strong>只要包含了 Windows.h，那么 WIN32 常量是肯定定义了</strong>的设定，不能用于判断平台环境。<br>而<code>WINCE</code>便是判断是否为WINCE环境的程序<br><code>__CYGWIN__</code>如果事先有了解过cygwin这个程序的话，这个应该不难看懂，也是用以判断环境的定义，而cywin则是在Windows环境下用以模拟Unix环境的软件(P.S.还是蛮好用的)</li>
+<li>其次，观察第一个表达式，发现<code>_WIN32</code> 在之前已经被定义过了，通过查阅<a href="https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=vs-2017" target="_blank" rel="noopener">微软官方宏定义文档</a>发现这个字段作用是基于编译器一个信号，表明是Windows环境下编译及运行的程序。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/WIN32.png)<br>再查找前后未定义过的字段，继而发现`WIN32`是**只要包含了" alt="WIN" title="Windows.h，那么">
+                </div>
+                <div class="image-caption">Windows.h，那么</div>
+            </figure></li>
 <li>再次，观察第二个表达式，也是查找字段是否定义过，这个查了一下，发现这个宏定义是存在于opencv.dll这个文件里面的。也就是判断是否已经链接了动态库。</li>
 <li>这样这一行便很容易懂了，目的便是判断程序环境<strong>是否为Windows</strong>且已经链接opencv.dll的库用以进行下一步操作。</li>
 <li>再提一句，关于这个操作系统(环境)的判定其实还有很多，这里放一个<a href="https://github.com/qt/qt/blob/4.8/src/corelib/global/qglobal.h" target="_blank" rel="noopener">Qt里面关于系统判定的头文件(147行开始)(版本比较老了 可自行再自己qt里查看)</a></li>
@@ -248,13 +275,41 @@
 </ol>
 <p>所以接下来第一步便是需要在源码中寻找到真正的函数实现。</p>
 <h2 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h2><h3 id="理解高斯模糊函数"><a href="#理解高斯模糊函数" class="headerlink" title="理解高斯模糊函数"></a>理解高斯模糊函数</h3><p>高斯模糊函数本质是利用<strong>高斯滤波器</strong>对于给定图像进行<strong>平滑</strong>操作。平滑操作时什么，是减少噪点。噪点的原因又是什么，是单个像素包含的信息过于独立。如何减少噪点，很简单，只需要让每个像素点包含有周围像素的部分信息就行了呗。选用什么方法，最简单的方法便是——卷积(见下图)。利用一个给定的以某种分布函数构建的二维卷积内核，将中心点对准像素点，进行卷积操作，得到的像素点便包含了周围像素的不完全信息，这样子附近的像素点差异性便会越来越小，当整张图像(或选中部分)卷积完成后，每个像素点便不再过于独立，每个便有了附近像素点的信息，这样字图像便不会看上去那么的“扎眼”，会温润平滑许多，这就是高斯模糊的本质了。</p>
-<p><img src="pic/%E5%8D%B7%E7%A7%AF.png" alt="卷积操作"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/卷积.png" alt="卷积操作" title="">
+                </div>
+                <div class="image-caption">卷积操作</div>
+            </figure>
+
 <center>[相信看图大概大家就能明白卷积是个啥东西了 再结合上面语句应该就差不多了]</center>
 
 <h3 id="查找函数"><a href="#查找函数" class="headerlink" title="查找函数"></a>查找函数</h3><p>利用grep命令，很容易便能找到这个函数，找到文件并切到这个函数定义，便可以窥见整个函数的全貌了。</p>
-<p><img src="pic/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E6%89%BE1.png" alt="查找"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/关键字查找1.png" alt="查找" title="">
+                </div>
+                <div class="image-caption">查找</div>
+            </figure>
+
 <p>以下是cv::GaussianBlur函数全貌:</p>
-<p><img src="pic/%E5%87%BD%E6%95%B01.png" alt="func1"><br><img src="pic/%E5%87%BD%E6%95%B02.png" alt="func2"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/函数1.png" alt="func1" title="">
+                </div>
+                <div class="image-caption">func1</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/函数2.png" alt="func2" title="">
+                </div>
+                <div class="image-caption">func2</div>
+            </figure>
+
 <h3 id="分析函数"><a href="#分析函数" class="headerlink" title="分析函数"></a>分析函数</h3><p>分析这个函数之前，首先先要从内部关联的函数看起。</p>
 <h4 id="CV-INSTRUMENT-REGION"><a href="#CV-INSTRUMENT-REGION" class="headerlink" title="CV_INSTRUMENT_REGION()"></a>CV_INSTRUMENT_REGION()</h4><p>这一行末尾没有分号，这样的类似函数的字符段有很大可能是一个宏定义变量，经查找，在private.hpp文件中有以下定义：</p>
 <blockquote>
@@ -266,7 +321,14 @@
 
 
 <h4 id="CV-OVX-RUN-true-openvx-gaussianBlur-src-dst-ksize-sigma1-sigma2-borderType"><a href="#CV-OVX-RUN-true-openvx-gaussianBlur-src-dst-ksize-sigma1-sigma2-borderType" class="headerlink" title="CV_OVX_RUN(true, openvx_gaussianBlur(_src, _dst, ksize, sigma1, sigma2, borderType))"></a>CV_OVX_RUN(true, openvx_gaussianBlur(_src, _dst, ksize, sigma1, sigma2, borderType))</h4><p>这里很明显是一个被宏定义的字段，通过查找，我们能够找到其定位在<code>modules/core/include/opencv2/core/openvx/ovx_defs.hpp</code>当中</p>
-<p><img src="pic/%E5%87%BD%E6%95%B03.png" alt="func3"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/函数3.png" alt="func3" title="">
+                </div>
+                <div class="image-caption">func3</div>
+            </figure>
+
 <p>按每行解析的话就是如下:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用于检测基于OpenVX的实现的实用程序宏</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> HAVE_OPENVX</span></span><br><span class="line">	<span class="comment">// 如果检测到OPENVX便执行下列语句</span></span><br><span class="line">	<span class="comment">// 下面这两句主要作用也是标识</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> IVX_HIDE_INFO_WARNINGS <span class="comment">// 隐藏警告信息</span></span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> IVX_USE_OPENCV <span class="comment">// 使用opencv的标识</span></span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ivx.hpp"</span> <span class="comment">// 将hpp文件包含进来</span></span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> CV_OVX_RUN(condition, func, ...)          \ <span class="comment">// ...会被替换</span></span></span><br><span class="line">    	<span class="comment">// 这里为了给外界提供OpenVX使用表示 利用宏定义做成了一个接口</span></span><br><span class="line">		<span class="comment">// 而这个接口则是主要为了提供硬件层面加速用的(主要面向对象是嵌入式设计)</span></span><br><span class="line">        <span class="keyword">if</span> (cv::useOpenVX() &amp;&amp; (condition) &amp;&amp; func)   \</span><br><span class="line">        &#123;                                             \</span><br><span class="line">        	<span class="comment">// __VA_ARGS__是可变参数宏定义 用以替换上面...的内容</span></span><br><span class="line">            <span class="keyword">return</span> __VA_ARGS__;                       \</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line">	<span class="comment">// 否则便执行下面这条</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> CV_OVX_RUN(condition, func, ...)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">// HAVE_OPENVX</span></span></span><br></pre></td></tr></table></figure>
 
@@ -312,7 +374,14 @@
 <p>首先，针对<code>0x3a50</code>这个奇怪的数值，我们先转换为2进制查看规律，通过查找比对，发现其数值与变量类型有着一一对应的关系，然后16384则是1 &lt;&lt; 14的结果(刚好每个对应两位二进制数值)，这个换成二进制则是</p>
 <p>​    16384   = 10 00 00 00 00 00 00</p>
 <p>​    0x3a50 = 11 10 10 01 01 00 00</p>
-<p><img src="pic/bin.png" alt="1"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="pic/bin.png" alt="1" title="">
+                </div>
+                <div class="image-caption">1</div>
+            </figure>
+
 <p>稍微先理解一下，在下先说一下剩下的函数然后一起解析。</p>
 <p>这里先计算无符号整型的长度(在64位系统下是4 desu)然后除以4 再加上1 ，</p>
 <p>就是说这是2 * 16384 | 0x3a50</p>
@@ -366,7 +435,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-10-10T16:37:27.870Z" itemprop="dateUpdated">2019-10-11 00:37:27</time>
+    最后更新时间：<time datetime="2020-07-11T13:34:51.677Z" itemprop="dateUpdated">2020-07-11 21:34:51</time>
 </span><br>
 
 
@@ -392,6 +461,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cv/" rel="tag">cv</a></li></ul>
+
 
             
 <div class="page-share-wrap">
