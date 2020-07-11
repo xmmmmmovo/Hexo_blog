@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.fivezha.cn/tags/index.html</loc>
+    
+    <lastmod>2020-07-11T14:08:33.826Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.fivezha.cn/categories/index.html</loc>
+    
+    <lastmod>2020-07-11T14:08:24.325Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.fivezha.cn/2018/04/20/git-guide/</loc>
+    
+    <lastmod>2020-07-11T14:06:33.757Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.fivezha.cn/about/index.html</loc>
+    
+    <lastmod>2020-07-11T14:05:30.668Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.fivezha.cn/2020/07/11/linear-anime/</loc>
     
     <lastmod>2020-07-11T14:00:49.638Z</lastmod>
@@ -75,27 +103,6 @@
     <loc>http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/</loc>
     
     <lastmod>2020-07-11T13:34:51.677Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/about/index.html</loc>
-    
-    <lastmod>2020-07-11T08:25:27.658Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/categories/index.html</loc>
-    
-    <lastmod>2019-03-02T10:18:41.989Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/2018/04/20/git-guide/</loc>
-    
-    <lastmod>2019-01-30T17:55:47.071Z</lastmod>
     
   </url>
   

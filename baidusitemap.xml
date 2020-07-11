@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.fivezha.cn/2018/04/20/git-guide/</loc>
+    <lastmod>2020-07-11</lastmod>
+  </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/11/linear-anime/</loc>
     <lastmod>2020-07-11</lastmod>
   </url>  <url>
@@ -33,8 +36,5 @@
   </url>  <url>
     <loc>http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/</loc>
     <lastmod>2020-07-11</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2018/04/20/git-guide/</loc>
-    <lastmod>2019-01-30</lastmod>
   </url>
 </urlset>
