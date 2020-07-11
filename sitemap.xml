@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.fivezha.cn/2020/05/01/linear-anime/</loc>
+    
+    <lastmod>2020-07-11T14:13:28.197Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.fivezha.cn/tags/index.html</loc>
     
     <lastmod>2020-07-11T14:08:33.826Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://blog.fivezha.cn/about/index.html</loc>
     
     <lastmod>2020-07-11T14:05:30.668Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/2020/07/11/linear-anime/</loc>
-    
-    <lastmod>2020-07-11T14:00:49.638Z</lastmod>
     
   </url>
   
