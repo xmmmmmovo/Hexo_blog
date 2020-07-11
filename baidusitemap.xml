@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.fivezha.cn/2018/10/15/nazo-io-answer/</loc>
+    <lastmod>2020-07-11</lastmod>
+  </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/11/algorithm4th-1/</loc>
     <lastmod>2020-07-11</lastmod>
   </url>  <url>
@@ -26,9 +29,6 @@
     <lastmod>2020-07-11</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2019/12/09/page-fifo/</loc>
-    <lastmod>2020-07-11</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2018/10/15/nazo-io-answer/</loc>
     <lastmod>2020-07-11</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2018/09/08/LaTeX-math-symbols/</loc>
