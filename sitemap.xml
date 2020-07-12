@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.fivezha.cn/links/index.html</loc>
+    
+    <lastmod>2020-07-12T02:02:10.736Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.fivezha.cn/tags/index.html</loc>
+    
+    <lastmod>2020-07-12T01:48:08.218Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.fivezha.cn/categories/index.html</loc>
+    
+    <lastmod>2020-07-12T01:48:00.262Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.fivezha.cn/2018/10/15/nazo-io-answer/</loc>
     
     <lastmod>2020-07-11T16:17:36.605Z</lastmod>
@@ -26,20 +47,6 @@
     <loc>http://blog.fivezha.cn/2020/05/01/linear-anime/</loc>
     
     <lastmod>2020-07-11T14:13:28.197Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/tags/index.html</loc>
-    
-    <lastmod>2020-07-11T14:08:33.826Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/categories/index.html</loc>
-    
-    <lastmod>2020-07-11T14:08:24.325Z</lastmod>
     
   </url>
   
