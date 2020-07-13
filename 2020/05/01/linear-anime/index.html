@@ -28,16 +28,16 @@
 <meta property="og:site_name" content="异国迷宫的十字路口">
 <meta property="og:description" content="起因是因为今天看到b站上有自媒体评测 MIUI12 , 说到了动画流畅度那方面弹幕都说线性动画非线性动画什么的, 其实很早之前 MUI 就是全线采用非线性动画了, 但这个线性与非线性又是什么, 有什么区别呢, 我今天就稍微来讲一下.其实这个高中就学习过了, 不过因为最近学习了js, 可以更加明确的展示出来了.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320557603-83ac95ee-be22-4c90-8b6d-67819c6439bc.png#align=left&display=inline&height=233&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=234&size=4079&status=done&style=none&width=234">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320756761-3d5a0233-e333-4fdb-a2a2-38aabfc5d443.png#align=left&display=inline&height=224&margin=%5Bobject%20Object%5D&name=image.png&originHeight=224&originWidth=218&size=5006&status=done&style=none&width=218">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320853246-0a0dc7da-a845-4b4d-9280-6ada3d2c2370.png#align=left&display=inline&height=222&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=232&size=9025&status=done&style=none&width=232">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320557603-83ac95ee-be22-4c90-8b6d-67819c6439bc.png">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320756761-3d5a0233-e333-4fdb-a2a2-38aabfc5d443.png">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320853246-0a0dc7da-a845-4b4d-9280-6ada3d2c2370.png">
 <meta property="article:published_time" content="2020-05-01T13:34:56.000Z">
-<meta property="article:modified_time" content="2020-07-11T14:13:28.197Z">
+<meta property="article:modified_time" content="2020-07-13T13:15:28.879Z">
 <meta property="article:author" content="xmmmmmovo">
 <meta property="article:tag" content="animation">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320557603-83ac95ee-be22-4c90-8b6d-67819c6439bc.png#align=left&display=inline&height=233&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=234&size=4079&status=done&style=none&width=234">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320557603-83ac95ee-be22-4c90-8b6d-67819c6439bc.png">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -177,7 +177,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是线性动画-非线性动画"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是线性动画&#x2F;非线性动画</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是动画"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是动画?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是非线性动画"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">什么是非线性动画</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是线性动画"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">什么是线性动画</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#线性动画-非线性动画有什么用"><span class="post-toc-number">2.</span> <span class="post-toc-text">线性动画&#x2F;非线性动画有什么用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单的线性动画-点击图片看动画"><span class="post-toc-number">3.</span> <span class="post-toc-text">简单的线性动画(点击图片看动画):</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单的非线性-点击图片看动画"><span class="post-toc-number">4.</span> <span class="post-toc-text">简单的非线性(点击图片看动画):</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#圆弧非线性"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">圆弧非线性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#加减速非线性"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">加减速非线性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#碰撞反弹"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">碰撞反弹</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">5.</span> <span class="post-toc-text">总结</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是线性动画-非线性动画"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是线性动画&#x2F;非线性动画</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是动画"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是动画?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是非线性动画"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">什么是非线性动画</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是线性动画"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">什么是线性动画</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#线性动画-非线性动画有什么用"><span class="post-toc-number">2.</span> <span class="post-toc-text">线性动画&#x2F;非线性动画有什么用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单的线性动画-点击图片看动画"><span class="post-toc-number">3.</span> <span class="post-toc-text">简单的线性动画(点击图片看动画):</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#"><span class="post-toc-number">4.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单的非线性-点击图片看动画"><span class="post-toc-number">5.</span> <span class="post-toc-text">简单的非线性(点击图片看动画):</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#圆弧非线性"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">圆弧非线性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#加减速非线性"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">加减速非线性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#碰撞反弹"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">碰撞反弹</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">6.</span> <span class="post-toc-text">总结</span></a></li></ol>
         </nav>
     </aside>
 
@@ -217,6 +217,15 @@
 </blockquote>
 <p>看上去很高级, 说白了其实就是动画的关键帧停留位置(时段), 也就是说, 非线性的关键帧所停留的并不是处于常见规律中的, 他可能是遵循二次函数, 遵循震荡函数, 总之, 其规律一定不是线性规律(一次函数).</p>
 <h3 id="什么是线性动画"><a href="#什么是线性动画" class="headerlink" title="什么是线性动画"></a>什么是线性动画</h3><p>所以, 线性动画就很容易理解了, 所有关键帧停留位置其实都是处在一条线中的, 其导数永远是常数.</p>
+<h2 id="线性动画-非线性动画有什么用"><a href="#线性动画-非线性动画有什么用" class="headerlink" title="线性动画/非线性动画有什么用"></a>线性动画/非线性动画有什么用</h2><p>那么, 非线性动画又有着什么样的特殊用途呢?<br>很简单的, 应用在手机上, 这会让你的动画感觉更有动感, 更加精致, 不会像是线性动画那样, 一板一眼.<br>比如 <code>IOS</code> 一直都是非线性动画, 给人的感受就非常的丝滑.<br>而早年间的 <code>Android</code> 动画都是线性动画, 给人的感觉就像是机械一般的精密但刻板. </p>
+<h2 id="简单的线性动画-点击图片看动画"><a href="#简单的线性动画-点击图片看动画" class="headerlink" title="简单的线性动画(点击图片看动画):"></a>简单的线性动画(点击图片看动画):</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320557603-83ac95ee-be22-4c90-8b6d-67819c6439bc.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="xmmmmmovo" data-slug-hash="ExVwZpd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="线性动画">
   <span>See the Pen <a href="https://codepen.io/xmmmmmovo/pen/ExVwZpd" target="_blank" rel="noopener">
   线性动画</a> by  !输认不永DGL (<a href="https://codepen.io/xmmmmmovo" target="_blank" rel="noopener">@xmmmmmovo</a>)
@@ -224,21 +233,12 @@
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-<h2 id="线性动画-非线性动画有什么用"><a href="#线性动画-非线性动画有什么用" class="headerlink" title="线性动画/非线性动画有什么用"></a>线性动画/非线性动画有什么用</h2><p>那么, 非线性动画又有着什么样的特殊用途呢?<br>很简单的, 应用在手机上, 这会让你的动画感觉更有动感, 更加精致, 不会像是线性动画那样, 一板一眼.<br>比如 <code>IOS</code> 一直都是非线性动画, 给人的感受就非常的丝滑.<br>而早年间的 <code>Android</code> 动画都是线性动画, 给人的感觉就像是机械一般的精密但刻板. </p>
-<h2 id="简单的线性动画-点击图片看动画"><a href="#简单的线性动画-点击图片看动画" class="headerlink" title="简单的线性动画(点击图片看动画):"></a>简单的线性动画(点击图片看动画):</h2><figure class="image-bubble">
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="简单的非线性-点击图片看动画"><a href="#简单的非线性-点击图片看动画" class="headerlink" title="简单的非线性(点击图片看动画):"></a>简单的非线性(点击图片看动画):</h2><h3 id="圆弧非线性"><a href="#圆弧非线性" class="headerlink" title="圆弧非线性"></a>圆弧非线性</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320557603-83ac95ee-be22-4c90-8b6d-67819c6439bc.png#align=left&display=inline&height=233&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=234&size=4079&status=done&style=none&width=234" alt="image.png" title="">
+                    <img src="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320756761-3d5a0233-e333-4fdb-a2a2-38aabfc5d443.png" alt="img" title="">
                 </div>
-                <div class="image-caption">image.png</div>
-            </figure>
-
-<h2 id="简单的非线性-点击图片看动画"><a href="#简单的非线性-点击图片看动画" class="headerlink" title="简单的非线性(点击图片看动画):"></a>简单的非线性(点击图片看动画):</h2><h3 id="圆弧非线性"><a href="#圆弧非线性" class="headerlink" title="圆弧非线性"></a>圆弧非线性</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320756761-3d5a0233-e333-4fdb-a2a2-38aabfc5d443.png#align=left&display=inline&height=224&margin=%5Bobject%20Object%5D&name=image.png&originHeight=224&originWidth=218&size=5006&status=done&style=none&width=218" alt="image.png" title="">
-                </div>
-                <div class="image-caption">image.png</div>
+                <div class="image-caption">img</div>
             </figure>
 
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="xmmmmmovo" data-slug-hash="gOaGmpg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="加速非线性">
@@ -259,9 +259,9 @@
 <h3 id="碰撞反弹"><a href="#碰撞反弹" class="headerlink" title="碰撞反弹"></a>碰撞反弹</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320853246-0a0dc7da-a845-4b4d-9280-6ada3d2c2370.png#align=left&display=inline&height=222&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=232&size=9025&status=done&style=none&width=232" alt="image.png" title="">
+                    <img src="https://cdn.nlark.com/yuque/0/2020/png/1337142/1588320853246-0a0dc7da-a845-4b4d-9280-6ada3d2c2370.png" alt="img" title="">
                 </div>
-                <div class="image-caption">image.png</div>
+                <div class="image-caption">img</div>
             </figure>
 <p>如果在开始时有动画效果，比如弹跳 —— 那么它将在最后显示。<br>上图中常规弹跳为红色，easeOut 弹跳为蓝色。</p>
 <ul>
@@ -284,7 +284,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-07-11T14:13:28.197Z" itemprop="dateUpdated">2020-07-11 22:13:28</time>
+    最后更新时间：<time datetime="2020-07-13T13:15:28.879Z" itemprop="dateUpdated">2020-07-13 21:15:28</time>
 </span><br>
 
 
@@ -379,7 +379,7 @@
     <div class="waves-block waves-effect next">
       <a href="/2020/04/29/socket-program-2/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">网络编程笔记(1)---UDP与分包协议</h4>
+        <h4 class="title">网络编程笔记(2)---UDP与分包协议</h4>
       </a>
     </div>
   
