@@ -30,19 +30,19 @@
     
     
     <meta name="keywords" content="algorithm,kotlin">
-    <meta name="description" content="双向队列和双栈缓冲区的实现">
+    <meta name="description" content="双向队列,双栈缓冲区,蛮力法四数之和以及快速三数之和的实现">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法(第四版)笔记(4)---Deque,Buffer,四数之和,三数之和">
 <meta property="og:url" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/index.html">
 <meta property="og:site_name" content="异国迷宫的十字路口">
-<meta property="og:description" content="双向队列和双栈缓冲区的实现">
+<meta property="og:description" content="双向队列,双栈缓冲区,蛮力法四数之和以及快速三数之和的实现">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/pics/image-20200717093114582.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/pics/image-20200717093315081.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/pics/image-20200717095951864.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/pics/image-20200717095958140.png">
 <meta property="article:published_time" content="2020-07-17T01:36:36.000Z">
-<meta property="article:modified_time" content="2020-07-18T11:54:51.781Z">
+<meta property="article:modified_time" content="2020-07-18T12:22:00.188Z">
 <meta property="article:author" content="xmmmmmovo">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="kotlin">
@@ -210,7 +210,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>双向队列和双栈缓冲区的实现<a id="more"></a></p>
+            <p>双向队列,双栈缓冲区,蛮力法四数之和以及快速三数之和的实现<a id="more"></a></p>
 <h2 id="双向队列"><a href="#双向队列" class="headerlink" title="双向队列"></a>双向队列</h2><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -251,10 +251,11 @@
 
 <h2 id="四数之和"><a href="#四数之和" class="headerlink" title="四数之和"></a>四数之和</h2><h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 蛮力法求数字之和</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">fourSumForce</span><span class="params">(list: <span class="type">List</span>&lt;<span class="type">Int</span>&gt;, num: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (a <span class="keyword">in</span> list.indices)</span><br><span class="line">        <span class="keyword">for</span> (b <span class="keyword">in</span> a until list.size)</span><br><span class="line">            <span class="keyword">for</span> (c <span class="keyword">in</span> b until list.size)</span><br><span class="line">                <span class="keyword">for</span> (d <span class="keyword">in</span> c until list.size)</span><br><span class="line">                    <span class="keyword">if</span> (list[a] + list[b] + list[c] + list[d] == num) &#123;</span><br><span class="line">                        cnt++</span><br><span class="line">                    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>时间复杂度:<br>$$<br>\mathcal{O}(N^4)<br>$$</p>
 <h2 id="三数之和"><a href="#三数之和" class="headerlink" title="三数之和"></a>三数之和</h2><h3 id="二分法求三数之和"><a href="#二分法求三数之和" class="headerlink" title="二分法求三数之和"></a>二分法求三数之和</h3><p>先排序，依旧是两重循环找出前两个数字，第三个数值利用二分法从剩余元素中找。</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="type">&lt;T : Comparable&lt;T&gt;</span>&gt; <span class="title">containsDuplicatesInSorted</span><span class="params">(list: <span class="type">List</span>&lt;<span class="type">T</span>&gt;)</span></span>: <span class="built_in">Boolean</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0</span> until list.size - <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (list[i] == list[i + <span class="number">1</span>]) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二分求非重复三数之和</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">threeSumBinaryFast</span><span class="params">(list: <span class="type">List</span>&lt;<span class="type">Int</span>&gt;)</span></span>: List&lt;List&lt;<span class="built_in">Int</span>&gt;&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> res = LinkedList&lt;List&lt;<span class="built_in">Int</span>&gt;&gt;()</span><br><span class="line">    <span class="keyword">val</span> sl = list.sorted().run &#123;</span><br><span class="line">        <span class="keyword">if</span> (containsDuplicatesInSorted(<span class="keyword">this</span>))</span><br><span class="line">            distinct()</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">this</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (list.size &lt; <span class="number">3</span>) <span class="keyword">throw</span> IllegalArgumentException(<span class="string">"数组非重复元素小于3个!"</span>)</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> sl.indices) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j <span class="keyword">in</span> i until sl.size) &#123;</span><br><span class="line">            <span class="keyword">val</span> k = binarySearch(sl, -(sl[i] + sl[j]), j + <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">if</span> (k != -<span class="number">1</span>) &#123;</span><br><span class="line">                res.add(listOf(sl[i], sl[j], sl[k]))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>时间复杂度方面，排序+循环时间复杂度$\mathcal{O}(N\log_2(N)+N^2\log_2{N})$，化简得：<br>$$<br>\mathcal{O}(N^2)<br>$$</p>
+<p>时间复杂度方面，排序+循环时间复杂度$\mathcal{O}(N\log_2(N)+N^2\log_2{N})$，化简得：<br>$$<br>\mathcal{O}(N^2)<br>$$<br>空间复杂度:<br>$$<br>\mathcal{O}(N)<br>$$<br>排序产生的中间数组</p>
 
         </div>
 
@@ -263,8 +264,8 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-07-18T11:54:51.781Z"
-        itemprop="dateUpdated">2020-07-18 19:54:51</time>
+    最后更新时间：<time datetime="2020-07-18T12:22:00.188Z"
+        itemprop="dateUpdated">2020-07-18 20:22:00</time>
 </span><br>
 
 
@@ -312,7 +313,7 @@
         </li>
         <li>
             <a class="qq share-sns" target="_blank"
-                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和,三数之和》 — 异国迷宫的十字路口&source=双向队列和双栈缓冲区的实现"
+                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和,三数之和》 — 异国迷宫的十字路口&source=双向队列,双栈缓冲区,蛮力法四数之和以及快速三数之和的实现"
                 data-title=" QQ">
                 <i class="icon icon-qq"></i>
             </a>
@@ -511,7 +512,7 @@
         </li>
         <li>
             <a class="qq share-sns" target="_blank"
-                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和,三数之和》 — 异国迷宫的十字路口&source=双向队列和双栈缓冲区的实现"
+                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和,三数之和》 — 异国迷宫的十字路口&source=双向队列,双栈缓冲区,蛮力法四数之和以及快速三数之和的实现"
                 data-title=" QQ">
                 <i class="icon icon-qq"></i>
             </a>
