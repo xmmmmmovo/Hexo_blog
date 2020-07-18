@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.fivezha.cn/"/>
-  <updated>2020-07-18T12:47:01.564Z</updated>
+  <updated>2020-07-18T15:13:00.520Z</updated>
   <id>http://blog.fivezha.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谜之github徽章</title>
+    <link href="http://blog.fivezha.cn/2020/07/18/github-arctic/"/>
+    <id>http://blog.fivezha.cn/2020/07/18/github-arctic/</id>
+    <published>2020-07-18T14:51:41.000Z</published>
+    <updated>2020-07-18T15:13:00.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>没想到居然这么快就投入使用了<a id="more"></a></p><p>​    今天点开了许久未打开的GitHub，还没来得及点进动态查看大佬们star的项目之前，自己便先被一则消息吸引了，本着太长不看的原则，还未仔细查看便条件反射般的点了<code>Got it</code>的圆角矩形按钮。之后我的视线便顺着气泡凸起指向的位置寻去，发现了一枚雪花形状新徽章出现在了自己<code>Profile -&gt; Highlights</code>上，让那枚<code>Pro</code>徽章显得不那么孤单。鼠标<code>hover</code>过后便发现</p><iframe width="560" height="315" src="https://www.youtube.com/embed/fzI9FNjXQ0o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;没想到居然这么快就投入使用了
+    
+    </summary>
+    
+    
+      <category term="daily" scheme="http://blog.fivezha.cn/categories/daily/"/>
+    
+    
+      <category term="日常瞎写" scheme="http://blog.fivezha.cn/tags/%E6%97%A5%E5%B8%B8%E7%9E%8E%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>算法(第四版)笔记(5)---约瑟夫环问题</title>
