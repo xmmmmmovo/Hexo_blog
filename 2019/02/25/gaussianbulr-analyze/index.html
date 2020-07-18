@@ -2,10 +2,12 @@
 <html>
 <head>
     
-
+    
     
 <!-- Tencent Speed -->
-<script>var _speedMark = new Date()</script>
+<script>
+    var _speedMark = new Date()
+</script>
 <!-- End Tencent Speed -->
 <!-- Tencent Analysis -->
 <script async src="//tajs.qq.com/stats?sId=66574199"></script>
@@ -21,7 +23,7 @@
     
     
     
-    <title>opencv中高斯模糊(滤波器)的源码解析(c++版) | 异国迷宫的十字路口 | 一位弱鸡带学生的个人博客</title>
+    <title>opencv中高斯模糊(滤波器)的源码解析(c++版) - 异国迷宫的十字路口</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -54,95 +56,97 @@
 <meta name="twitter:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%A32.png">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
+    <link rel="stylesheet" href="//unpkg.com/indigo_pro@latest/css/style.css">
+    <script>
+        window.lazyScripts = []
+
+    </script>
 
     <!-- custom head -->
     
 
 <meta name="generator" content="Hexo 4.2.1"></head>
-
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.png">
+    <aside id="menu" >
+    <div class="inner flex-row-vertical">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+            <i class="icon icon-lg icon-close"></i>
         </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">xmmmmmovo</h5>
-          <a href="mailto:lolicoin@foxmail.com" title="lolicoin@foxmail.com" class="mail">lolicoin@foxmail.com</a>
-        </hgroup>
-      </div>
+        <div class="brand-wrap" style="background-image:url(/img/brand.png)">
+            <div class="brand">
+                <a href="/" class="avatar waves-effect waves-circle waves-light">
+                    <img src="/img/avatar.png">
+                </a>
+                <hgroup class="introduce">
+                    <h5 class="nickname">xmmmmmovo</h5>
+                    <a href="mailto:lolicoin@foxmail.com" title="lolicoin@foxmail.com" class="mail">lolicoin@foxmail.com</a>
+                </hgroup>
+            </div>
+        </div>
+        <div class="scroll-wrap flex-col">
+            <ul class="nav">
+                
+                <li class="waves-block waves-effect">
+                    <a href="/" >
+                        <i class="icon icon-lg icon-home"></i>
+                        主页
+                    </a>
+                </li>
+                
+                <li class="waves-block waves-effect">
+                    <a href="/archives" >
+                        <i class="icon icon-lg icon-archives"></i>
+                        Archives
+                    </a>
+                </li>
+                
+                <li class="waves-block waves-effect">
+                    <a href="/tags" >
+                        <i class="icon icon-lg icon-tags"></i>
+                        Tags
+                    </a>
+                </li>
+                
+                <li class="waves-block waves-effect">
+                    <a href="/categories" >
+                        <i class="icon icon-lg icon-th-list"></i>
+                        分类
+                    </a>
+                </li>
+                
+                <li class="waves-block waves-effect">
+                    <a href="/about" >
+                        <i class="icon icon-lg icon-user"></i>
+                        关于
+                    </a>
+                </li>
+                
+                <li class="waves-block waves-effect">
+                    <a href="/links" >
+                        <i class="icon icon-lg icon-external-link"></i>
+                        友链
+                    </a>
+                </li>
+                
+                <li class="waves-block waves-effect">
+                    <a href="https://github.com/xmmmmmovo" target="_blank" >
+                        <i class="icon icon-lg icon-github"></i>
+                        Github
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
     </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/about"  >
-                <i class="icon icon-lg icon-user"></i>
-                关于
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/links"  >
-                <i class="icon icon-lg icon-external-link"></i>
-                友链
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/xmmmmmovo" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
 </aside>
 
     <main id="main">
         <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
+            <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">opencv中高斯模糊(滤波器)的源码解析(c++版)</div>
         
@@ -150,16 +154,12 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off"
+                placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
         </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
@@ -169,12 +169,13 @@
         <h1 class="title">opencv中高斯模糊(滤波器)的源码解析(c++版)</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-02-25T11:40:25.000Z" itemprop="datePublished" class="page-time">
-  2019-02-25
+            <time datetime="2019-02-25T11:40:25.000Z" itemprop="datePublished" class="page-time">
+    2019-02-25
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
+<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
+
 
             
         </h5>
@@ -185,33 +186,31 @@
 
 </header>
 
-
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析函数接口"><span class="post-toc-number">1.</span> <span class="post-toc-text">分析函数接口</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源码解析"><span class="post-toc-number">2.</span> <span class="post-toc-text">源码解析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#理解高斯模糊函数"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">理解高斯模糊函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查找函数"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">查找函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分析函数"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">分析函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CV-INSTRUMENT-REGION"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">CV_INSTRUMENT_REGION()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#if-borderType-BORDER-CONSTANT-amp-amp-borderType-amp-BORDER-ISOLATED-0"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">if( borderType !&#x3D; BORDER_CONSTANT &amp;&amp; (borderType &amp; BORDER_ISOLATED) !&#x3D; 0 )</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CV-OVX-RUN-true-openvx-gaussianBlur-src-dst-ksize-sigma1-sigma2-borderType"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">CV_OVX_RUN(true, openvx_gaussianBlur(_src, _dst, ksize, sigma1, sigma2, borderType))</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ifdef至endif部分"><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">ifdef至endif部分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#剩下部分"><span class="post-toc-number">2.3.5.</span> <span class="post-toc-text">剩下部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">3.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#借物表"><span class="post-toc-number">4.</span> <span class="post-toc-text">借物表</span></a></li></ol>
-        </nav>
-    </aside>
+<aside class="post-widget">
+    <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+        <h4>TOC</h4>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析函数接口"><span class="post-toc-number">1.</span> <span class="post-toc-text">分析函数接口</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源码解析"><span class="post-toc-number">2.</span> <span class="post-toc-text">源码解析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#理解高斯模糊函数"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">理解高斯模糊函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查找函数"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">查找函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分析函数"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">分析函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CV-INSTRUMENT-REGION"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">CV_INSTRUMENT_REGION()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#if-borderType-BORDER-CONSTANT-amp-amp-borderType-amp-BORDER-ISOLATED-0"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">if( borderType !&#x3D; BORDER_CONSTANT &amp;&amp; (borderType &amp; BORDER_ISOLATED) !&#x3D; 0 )</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CV-OVX-RUN-true-openvx-gaussianBlur-src-dst-ksize-sigma1-sigma2-borderType"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">CV_OVX_RUN(true, openvx_gaussianBlur(_src, _dst, ksize, sigma1, sigma2, borderType))</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ifdef至endif部分"><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">ifdef至endif部分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#剩下部分"><span class="post-toc-number">2.3.5.</span> <span class="post-toc-text">剩下部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">3.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#借物表"><span class="post-toc-number">4.</span> <span class="post-toc-text">借物表</span></a></li></ol>
+    </nav>
+</aside>
 
 
-<article id="post-gaussianbulr-analyze"
-  class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-gaussianbulr-analyze" class="post-article article-type-post fade"
+    itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">opencv中高斯模糊(滤波器)的源码解析(c++版)</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-02-25 19:40:25" datetime="2019-02-25T11:40:25.000Z"  itemprop="datePublished">2019-02-25</time>
-
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
-
+            <time class="post-time" title="2019-02-25 19:40:25" datetime="2019-02-25T11:40:25.000Z"  itemprop="datePublished"><i class="icon icon-calendar"></i> 2019-02-25</time>
+            
+<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/study/">study</a></li></ul>
 
 
             
 <span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+    <i class="icon icon-eye" style="padding: 0 .3em;"></i><span id="busuanzi_value_page_pv"></span>
 </span>
 
 
@@ -449,7 +448,8 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-07-11T13:34:51.677Z" itemprop="dateUpdated">2020-07-11 21:34:51</time>
+    最后更新时间：<time datetime="2020-07-11T13:34:51.677Z"
+        itemprop="dateUpdated">2020-07-11 21:34:51</time>
 </span><br>
 
 
@@ -465,7 +465,6 @@
         </a>
     </footer>
 </blockquote>
-
         
 <div class="page-reward">
     <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
@@ -475,7 +474,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cv/" rel="tag">cv</a></li></ul>
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cv/" rel="tag">cv</a></li></ul>
 
 
             
@@ -484,38 +483,46 @@
 
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&source=因为实验室假期需要写一篇关于opencv的作业 所以顺便看了一下opencv(版本3.2.0)里面关于高斯模糊的源码" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&via=http://blog.fivezha.cn" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
+        <li>
+            <a class="weibo share-sns" target="_blank"
+                href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png"
+                data-title="微博">
+                <i class="icon icon-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+                <i class="icon icon-weixin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="qq share-sns" target="_blank"
+                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&source=因为实验室假期需要写一篇关于opencv的作业 所以顺便看了一下opencv(版本3.2.0)里面关于高斯模糊的源码"
+                data-title=" QQ">
+                <i class="icon icon-qq"></i>
+            </a>
+        </li>
+        <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/"
+                data-title=" Facebook">
+                <i class="icon icon-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter share-sns" target="_blank"
+                href="https://twitter.com/intent/tweet?text=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&via=http://blog.fivezha.cn"
+                data-title=" Twitter">
+                <i class="icon icon-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/"
+                data-title=" Google+">
+                <i class="icon icon-google-plus"></i>
+            </a>
+        </li>
     </ul>
- </div>
+</div>
 
 
 
@@ -525,31 +532,29 @@
 </div>
 
 
-
         </div>
     </div>
 
     
 <nav class="post-nav flex-row flex-justify-between">
-  
+    
     <div class="waves-block waves-effect prev">
-      <a href="/2019/09/04/play-study-f/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">playframework初涉-1.环境配置</h4>
-      </a>
+        <a href="/2019/09/04/play-study-f/" id="post-prev" class="post-nav-link">
+            <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+            <h4 class="title">playframework初涉-1.环境配置</h4>
+        </a>
     </div>
-  
+    
 
-  
+    
     <div class="waves-block waves-effect next">
-      <a href="/2018/10/15/nazo-io-answer/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">nazo.io攻略(完)</h4>
-      </a>
+        <a href="/2018/10/15/nazo-io-answer/" id="post-next" class="post-nav-link">
+            <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+            <h4 class="title">nazo.io攻略(完)</h4>
+        </a>
     </div>
-  
+    
 </nav>
-
 
 
     
@@ -577,22 +582,24 @@
     <script>
         var id = location.pathname
         if (location.pathname.length > 50) {
-          id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
+            id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
         }
         const gitalk = new Gitalk({
-          clientID: '6f5b3e73c6c988a1d4a7',
-          clientSecret: '9bd70bb9c8873b4dfad85de907470b470c849df5',
-          repo: 'xmmmmmovo.github.io',
-          owner: 'xmmmmmovo',
-          admin: ['xmmmmmovo'],
-          id: id,      // Ensure uniqueness and length less than 50
-          title: document.title.split('|')[0],
-          distractionFreeMode: false  // Facebook-like distraction free mode
+            clientID: '6f5b3e73c6c988a1d4a7',
+            clientSecret: '9bd70bb9c8873b4dfad85de907470b470c849df5',
+            repo: 'xmmmmmovo.github.io',
+            owner: 'xmmmmmovo',
+            admin: ['xmmmmmovo'],
+            id: id, // Ensure uniqueness and length less than 50
+            title: document.title.split('|')[0],
+            distractionFreeMode: false // Facebook-like distraction free mode
         })
 
         gitalk.render('gitalk-container')
+
     </script>
 </section>
+
 
 
 
@@ -613,11 +620,11 @@
         </div>
         
         <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.png"
+                data-alipay="/img/alipay.png">
             <div class="reward-toggle-ctrol">
                 <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item switch" id="switvh">切换</span>
                 <span class="reward-toggle-item alipay">支付宝</span>
             </div>
         </label>
@@ -626,6 +633,9 @@
 </div>
 
 
+<script src="//unpkg.com/jquery@latest/dist/jquery.min.js"></script>
+<script src="//unpkg.com/indigo_pro@latest/js/clipboard.min.js"></script>
+<script src="//unpkg.com/indigo_pro@latest/js/copy.min.js"></script>
 
 </div>
 
@@ -643,68 +653,82 @@
 
 
         <p>
-            
-            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>xmmmmmovo &copy;
+                2017 -
+                2020</span>
+            <span>
+                
+                <a href="http://beian.miit.gov.cn/" target="_blank">鲁ICP备20025683号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a
+                    href="https://github.com/ivitan/indigo" target="_blank">Indigo</a>
+            </span>
         </p>
     </div>
     <div class="bottom">
-        <p><span>xmmmmmovo &copy; 2017 - 2020</span>
-            <span>
-                
-                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备20025683号-1</a><br>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
+        <p>
+            
+            <span>内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 协议</a></span>
         </p>
     </div>
 </footer>
 
     </main>
     <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span
+        class="icon icon-lg icon-chevron-up"></span></a>
 
 
 
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&source=因为实验室假期需要写一篇关于opencv的作业 所以顺便看了一下opencv(版本3.2.0)里面关于高斯模糊的源码" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&via=http://blog.fivezha.cn" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
+        <li>
+            <a class="weibo share-sns" target="_blank"
+                href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png"
+                data-title="微博">
+                <i class="icon icon-weibo"></i>
+            </a>
+        </li>
+        <li>
+            <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+                <i class="icon icon-weixin"></i>
+            </a>
+        </li>
+        <li>
+            <a class="qq share-sns" target="_blank"
+                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&title=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&source=因为实验室假期需要写一篇关于opencv的作业 所以顺便看了一下opencv(版本3.2.0)里面关于高斯模糊的源码"
+                data-title=" QQ">
+                <i class="icon icon-qq"></i>
+            </a>
+        </li>
+        <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/"
+                data-title=" Facebook">
+                <i class="icon icon-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a class="twitter share-sns" target="_blank"
+                href="https://twitter.com/intent/tweet?text=《opencv中高斯模糊(滤波器)的源码解析(c++版)》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/&via=http://blog.fivezha.cn"
+                data-title=" Twitter">
+                <i class="icon icon-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/"
+                data-title=" Google+">
+                <i class="icon icon-google-plus"></i>
+            </a>
+        </li>
     </ul>
- </div>
+</div>
 
 
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/"
+        alt="微信分享二维码">
 </div>
 
 
@@ -717,34 +741,33 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
+<script src="//unpkg.com/indigo_pro@latest/js/main.min.js"></script>
 
 <div class="search-panel" id="search-panel">
     <ul class="search-result" id="search-result"></ul>
 </div>
 <template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
+    <li class="item">
+        <a href="{path}" class="waves-block waves-effect">
+            <div class="title ellipsis" title="{title}">{title}</div>
+            <div class="flex-row flex-middle">
+                <div class="tags ellipsis">
+                    {tags}
+                </div>
+                <time class="flex-col time">{date}</time>
             </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
+        </a>
+    </li>
 </template>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="//unpkg.com/indigo_pro@latest/js/search.min.js" async></script>
 
 
 
 <!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
+    MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
         processEscapes: true,
@@ -766,7 +789,6 @@ MathJax.Hub.Queue(function() {
 
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 
 
 
