@@ -23,7 +23,7 @@
     
     
     
-    <title>算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast - 异国迷宫的十字路口</title>
+    <title>算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和 - 异国迷宫的十字路口</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -32,7 +32,7 @@
     <meta name="keywords" content="algorithm,kotlin">
     <meta name="description" content="双向队列和双栈缓冲区的实现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast">
+<meta property="og:title" content="算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和">
 <meta property="og:url" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/index.html">
 <meta property="og:site_name" content="异国迷宫的十字路口">
 <meta property="og:description" content="双向队列和双栈缓冲区的实现">
@@ -42,7 +42,7 @@
 <meta property="og:image" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/pics/image-20200717095951864.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/pics/image-20200717095958140.png">
 <meta property="article:published_time" content="2020-07-17T01:36:36.000Z">
-<meta property="article:modified_time" content="2020-07-18T00:57:44.297Z">
+<meta property="article:modified_time" content="2020-07-18T11:52:44.960Z">
 <meta property="article:author" content="xmmmmmovo">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="kotlin">
@@ -92,7 +92,7 @@
                 <li class="waves-block waves-effect">
                     <a href="/archives" >
                         <i class="icon icon-lg icon-archives"></i>
-                        Archives
+                        归档
                     </a>
                 </li>
                 
@@ -142,7 +142,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
             <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast</div>
+        <div class="flex-col header-title ellipsis">算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -160,7 +160,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast</h1>
+        <h1 class="title">算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和</h1>
         <h5 class="subtitle">
             
             <time datetime="2020-07-17T01:36:36.000Z" itemprop="datePublished" class="page-time">
@@ -185,7 +185,7 @@
 <aside class="post-widget">
     <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
         <h4>TOC</h4>
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#双向队列"><span class="post-toc-number">1.</span> <span class="post-toc-text">双向队列</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#API"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#缓冲区Buffer"><span class="post-toc-number">2.</span> <span class="post-toc-text">缓冲区Buffer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#API-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现-1"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四数之和"><span class="post-toc-number">3.</span> <span class="post-toc-text">四数之和</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现-2"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三数之和"><span class="post-toc-number">4.</span> <span class="post-toc-text">三数之和</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现-3"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">实现</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#双向队列"><span class="post-toc-number">1.</span> <span class="post-toc-text">双向队列</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#API"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#缓冲区Buffer"><span class="post-toc-number">2.</span> <span class="post-toc-text">缓冲区Buffer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#API-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现-1"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四数之和"><span class="post-toc-number">3.</span> <span class="post-toc-text">四数之和</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现-2"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三数之和"><span class="post-toc-number">4.</span> <span class="post-toc-text">三数之和</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二分法求三数之和"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">二分法求三数之和</span></a></li></ol></li></ol>
     </nav>
 </aside>
 
@@ -194,7 +194,7 @@
     itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast</h1>
+        <h1 class="post-card-title">算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和</h1>
         <div class="post-meta">
             
             <time class="post-time" title="2020-07-17 09:36:36" datetime="2020-07-17T01:36:36.000Z"  itemprop="datePublished"><i class="icon icon-calendar"></i> 2020-07-17</time>
@@ -251,24 +251,10 @@
 
 <h2 id="四数之和"><a href="#四数之和" class="headerlink" title="四数之和"></a>四数之和</h2><h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 蛮力法求数字之和</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">fourSumForce</span><span class="params">(list: <span class="type">List</span>&lt;<span class="type">Int</span>&gt;, num: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (a <span class="keyword">in</span> list.indices)</span><br><span class="line">        <span class="keyword">for</span> (b <span class="keyword">in</span> a until list.size)</span><br><span class="line">            <span class="keyword">for</span> (c <span class="keyword">in</span> b until list.size)</span><br><span class="line">                <span class="keyword">for</span> (d <span class="keyword">in</span> c until list.size)</span><br><span class="line">                    <span class="keyword">if</span> (list[a] + list[b] + list[c] + list[d] == num) &#123;</span><br><span class="line">                        cnt++</span><br><span class="line">                    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="三数之和"><a href="#三数之和" class="headerlink" title="三数之和"></a>三数之和</h2><h3 id="实现-3"><a href="#实现-3" class="headerlink" title="实现"></a>实现</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="三数之和"><a href="#三数之和" class="headerlink" title="三数之和"></a>三数之和</h2><h3 id="二分法求三数之和"><a href="#二分法求三数之和" class="headerlink" title="二分法求三数之和"></a>二分法求三数之和</h3><p>先排序，依旧是两重循环找出前两个数字，第三个数值利用二分法从剩余元素中找。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="type">&lt;T : Comparable&lt;T&gt;</span>&gt; <span class="title">containsDuplicatesInSorted</span><span class="params">(list: <span class="type">List</span>&lt;<span class="type">T</span>&gt;)</span></span>: <span class="built_in">Boolean</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0</span> until list.size - <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (list[i] == list[i + <span class="number">1</span>]) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二分求非重复三数之和</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">threeSumBinaryFast</span><span class="params">(list: <span class="type">List</span>&lt;<span class="type">Int</span>&gt;)</span></span>: List&lt;List&lt;<span class="built_in">Int</span>&gt;&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> res = LinkedList&lt;List&lt;<span class="built_in">Int</span>&gt;&gt;()</span><br><span class="line">    <span class="keyword">val</span> sl = list.sorted().run &#123;</span><br><span class="line">        <span class="keyword">if</span> (containsDuplicatesInSorted(<span class="keyword">this</span>))</span><br><span class="line">            distinct()</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">this</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (list.size &lt; <span class="number">3</span>) <span class="keyword">throw</span> IllegalArgumentException(<span class="string">"数组非重复元素小于3个!"</span>)</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> sl.indices) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j <span class="keyword">in</span> i until sl.size) &#123;</span><br><span class="line">            <span class="keyword">val</span> k = binarySearch(sl, -(sl[i] + sl[j]), j + <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">if</span> (k != -<span class="number">1</span>) &#123;</span><br><span class="line">                res.add(listOf(sl[i], sl[j], sl[k]))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>时间复杂度方面，排序+循环时间复杂度$\mathcal{O}(N\log_2(N)+N^2\log_2{N})$，化简得：<br>$$<br>\mathcal{O}(N^2)<br>$$</p>
 
         </div>
 
@@ -277,8 +263,8 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-07-18T00:57:44.297Z"
-        itemprop="dateUpdated">2020-07-18 08:57:44</time>
+    最后更新时间：<time datetime="2020-07-18T11:52:44.960Z"
+        itemprop="dateUpdated">2020-07-18 19:52:44</time>
 </span><br>
 
 
@@ -314,7 +300,7 @@
     <ul class="reset share-icons">
         <li>
             <a class="weibo share-sns" target="_blank"
-                href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png"
+                href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png"
                 data-title="微博">
                 <i class="icon icon-weibo"></i>
             </a>
@@ -326,7 +312,7 @@
         </li>
         <li>
             <a class="qq share-sns" target="_blank"
-                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast》 — 异国迷宫的十字路口&source=双向队列和双栈缓冲区的实现"
+                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和》 — 异国迷宫的十字路口&source=双向队列和双栈缓冲区的实现"
                 data-title=" QQ">
                 <i class="icon icon-qq"></i>
             </a>
@@ -339,7 +325,7 @@
         </li>
         <li>
             <a class="twitter share-sns" target="_blank"
-                href="https://twitter.com/intent/tweet?text=《算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&via=http://blog.fivezha.cn"
+                href="https://twitter.com/intent/tweet?text=《算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&via=http://blog.fivezha.cn"
                 data-title=" Twitter">
                 <i class="icon icon-twitter"></i>
             </a>
@@ -513,7 +499,7 @@
     <ul class="reset share-icons">
         <li>
             <a class="weibo share-sns" target="_blank"
-                href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png"
+                href="http://service.weibo.com/share/share.php?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和》 — 异国迷宫的十字路口&pic=http://blog.fivezha.cn/img/avatar.png"
                 data-title="微博">
                 <i class="icon icon-weibo"></i>
             </a>
@@ -525,7 +511,7 @@
         </li>
         <li>
             <a class="qq share-sns" target="_blank"
-                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast》 — 异国迷宫的十字路口&source=双向队列和双栈缓冲区的实现"
+                href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&title=《算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和》 — 异国迷宫的十字路口&source=双向队列和双栈缓冲区的实现"
                 data-title=" QQ">
                 <i class="icon icon-qq"></i>
             </a>
@@ -538,7 +524,7 @@
         </li>
         <li>
             <a class="twitter share-sns" target="_blank"
-                href="https://twitter.com/intent/tweet?text=《算法(第四版)笔记(4)---Deque,Buffer,4-sum,3-sumfast》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&via=http://blog.fivezha.cn"
+                href="https://twitter.com/intent/tweet?text=《算法(第四版)笔记(4)---Deque,Buffer,四数之和，三数之和》 — 异国迷宫的十字路口&url=http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/&via=http://blog.fivezha.cn"
                 data-title=" Twitter">
                 <i class="icon icon-twitter"></i>
             </a>
