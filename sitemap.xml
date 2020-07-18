@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
+    
+    <lastmod>2020-07-18T12:47:01.564Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/</loc>
     
     <lastmod>2020-07-18T12:22:00.188Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.fivezha.cn/2020/07/11/algorithm4th-1/</loc>
     
     <lastmod>2020-07-18T04:22:22.077Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
-    
-    <lastmod>2020-07-17T09:25:29.771Z</lastmod>
     
   </url>
   
