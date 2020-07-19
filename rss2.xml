@@ -9,42 +9,8 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 18 Jul 2020 15:36:34 GMT</pubDate>
+    <pubDate>Sat, 18 Jul 2020 12:22:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>谜之github徽章</title>
-      <link>http://blog.fivezha.cn/2020/07/18/github-arctic/</link>
-      <guid>http://blog.fivezha.cn/2020/07/18/github-arctic/</guid>
-      <pubDate>Sat, 18 Jul 2020 14:51:41 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;没想到居然这么快就投入使用了
-      
-      </description>
-      
-      
-      <content:encoded><![CDATA[<p>没想到居然这么快就投入使用了<a id="more"></a></p><p>​    今天点开了许久未打开的GitHub，还没来得及点进动态查看大佬们star的项目之前，自己便先被一则消息吸引了，本着太长不看的原则，还未仔细查看便条件反射般的点了<code>Got it</code>的圆角矩形按钮。之后我的视线便顺着气泡凸起指向的位置寻去，发现了一枚雪花形状新徽章出现在了自己<code>Profile -&gt; Highlights</code>上，让那枚<code>Pro</code>徽章显得不那么孤单。查看了一下详细信息后，阿这，这不是半年前在油管看到过的<strong>GitHub北极代码库</strong>计划吗？！</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="pics/image-20200718231856879.png" alt="image-20200718231856879" title="">                </div>                <div class="image-caption">image-20200718231856879</div>            </figure><p>​    当时因为新冠的原因宅在家里实在是太闲了，甚至无聊到了在油管搜索GitHub…….</p><p>​    然后就看到了下面的这个视频👇</p><iframe width="560" height="315" src="https://www.youtube.com/embed/fzI9FNjXQ0o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>​    大致讲的就是把代码存一份到北极去</p>]]></content:encoded>
-      
-      <comments>http://blog.fivezha.cn/2020/07/18/github-arctic/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>算法(第四版)笔记(5)---约瑟夫环问题</title>
-      <link>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</link>
-      <guid>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</guid>
-      <pubDate>Fri, 17 Jul 2020 09:24:23 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;约瑟夫环问题
-      
-      </description>
-      
-      
-      <content:encoded><![CDATA[<p>约瑟夫环问题<a id="more"></a></p>]]></content:encoded>
-      
-      <comments>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/#disqus_thread</comments>
-    </item>
     
     <item>
       <title>算法(第四版)笔记(4)---Deque,Buffer,四数之和,三数之和</title>
