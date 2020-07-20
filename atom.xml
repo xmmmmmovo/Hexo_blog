@@ -46,13 +46,13 @@
     <link href="http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/"/>
     <id>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</id>
     <published>2020-07-17T09:24:23.000Z</published>
-    <updated>2020-07-19T03:00:36.910Z</updated>
+    <updated>2020-07-20T00:59:18.055Z</updated>
     
-    <content type="html"><![CDATA[<p>约瑟夫环问题<a id="more"></a></p>]]></content>
+    <content type="html"><![CDATA[<p>约瑟夫环问题（蛮力，数学解法）<a id="more"></a></p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>约瑟夫问题是一个很著名的<del>杀人</del>问题：</p><p>约瑟夫问题是个著名的问题：N个人围成一圈，第一个人从1开始报数，报M的将被杀掉，下一个人接着从1开始报。如此反复，最后剩下一个，求最后的胜利者。<br>例如：只有三个人，把他们叫做A、B、C，他们围成一圈，从A开始报数，假设报2的人被杀掉。</p><ul><li>首先A开始报数，他报1。侥幸逃过一劫。</li><li>然后轮到B报数，他报2。非常惨，他被杀了</li><li>C接着从1开始报数</li><li>接着轮到A报数，他报2。也被杀死了。</li><li>最终胜利者是C</li></ul><p>可怜，真可怜，数学家真是心狠手辣（雾）</p><h2 id="普通解法"><a href="#普通解法" class="headerlink" title="普通解法"></a>普通解法</h2><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h2 id="数学解法"><a href="#数学解法" class="headerlink" title="数学解法"></a>数学解法</h2><h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h3><h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;约瑟夫环问题
+      &lt;p&gt;约瑟夫环问题（蛮力，数学解法）
     
     </summary>
     

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
+    
+    <lastmod>2020-07-20T00:59:18.055Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.fivezha.cn/2020/07/18/github-arctic/</loc>
     
     <lastmod>2020-07-19T12:11:29.619Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.fivezha.cn/backup.json</loc>
     
     <lastmod>2020-07-19T03:07:26.110Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
-    
-    <lastmod>2020-07-19T03:00:36.910Z</lastmod>
     
   </url>
   
