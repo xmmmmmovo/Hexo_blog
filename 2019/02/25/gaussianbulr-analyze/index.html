@@ -39,7 +39,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%A32.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E9%AB%98%E6%96%AF%E5%87%BD%E6%95%B0.png">
-<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%AE%8F%E5%AE%9A%E4%B9%892.png)%3Cbr%3E%E8%BF%99%E9%87%8C%E5%8F%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AE%8F%E7%BB%84%E6%88%90%E7%9A%84%E7%94%A8%E4%BB%A5%E5%AE%9A%E4%B9%89%60CV_EXPORTS%60%E7%9A%84%E5%AE%8F%E7%BB%84%EF%BC%8C%E8%BF%99%E4%B8%80%E6%AE%B5%E5%85%B6%E5%AE%9E%E5%B0%B1%E6%98%AF%E7%B1%BB%E4%BC%BC%E4%BA%8E%60if">
+<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%AE%8F%E5%AE%9A%E4%B9%89.png">
+<meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%AE%8F%E5%AE%9A%E4%B9%892.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/WIN32.png)%3Cbr%3E%E5%86%8D%E6%9F%A5%E6%89%BE%E5%89%8D%E5%90%8E%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E7%9A%84%E5%AD%97%E6%AE%B5%EF%BC%8C%E7%BB%A7%E8%80%8C%E5%8F%91%E7%8E%B0%60WIN32%60%E6%98%AF**%E5%8F%AA%E8%A6%81%E5%8C%85%E5%90%AB%E4%BA%86">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%8D%B7%E7%A7%AF.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E6%89%BE1.png">
@@ -48,7 +49,7 @@
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/%E5%87%BD%E6%95%B03.png">
 <meta property="og:image" content="http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/pic/bin.png">
 <meta property="article:published_time" content="2019-02-25T11:40:25.000Z">
-<meta property="article:modified_time" content="2020-07-11T13:34:51.677Z">
+<meta property="article:modified_time" content="2020-07-20T03:01:37.114Z">
 <meta property="article:author" content="xmmmmmovo">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="cv">
@@ -250,13 +251,12 @@
 </blockquote>
 <p>可以看到这个函数接口主要由四个部分组成:</p>
 <ol>
-<li><code>CV_EXPORTS_W</code><br>继续往上找 可以发现这是一个宏定义<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="pic/宏定义2.png)<br>这里又是一个宏组成的用以定义`CV_EXPORTS`的宏组，这一段其实就是类似于`if" alt="宏定义1](pic/宏定义.png)<br>可以发现 这个宏定义是在**编译阶段**将`CV_EXPORTS`替换为了`CV_EXPORTS_W`再向上查找 会发现<br>![宏定义2" title="else`的结构，主要的作用机理便是**适配各类环境(操作系统">
-                </div>
-                <div class="image-caption">else`的结构，主要的作用机理便是**适配各类环境(操作系统</div>
-            </figure>** 。从中，我们这里又分成了三个部分进行解析:<ol>
+<li><p><code>CV_EXPORTS_W</code><br>继续往上找 可以发现这是一个宏定义</p>
+<p><img src="pic/%E5%AE%8F%E5%AE%9A%E4%B9%89.png" alt="宏定义1"></p>
+<p>可以发现 这个宏定义是在<strong>编译阶段</strong>将<code>CV_EXPORTS</code>替换为了<code>CV_EXPORTS_W</code>再向上查找 会发现</p>
+<p><img src="pic/%E5%AE%8F%E5%AE%9A%E4%B9%892.png" alt="宏定义2"></p>
+<p>这里又是一个宏组成的用以定义<code>CV_EXPORTS</code>的宏组，这一段其实就是类似于<code>if else</code>的结构，主要的作用机理便是<strong>适配各类环境(操作系统)</strong> 。从中，我们这里又分成了三个部分进行解析:</p>
+<ol>
 <li><code>#if (defined WIN32 || defined _WIN32 || defined WINCE || defined __CYGWIN__) &amp;&amp; defined CVAPI_EXPORTS</code><br>可以看到，这里判断了两个表达式的逻辑与(<code>(defined WIN32 || defined _WIN32 || defined WINCE || defined __CYGWIN__)</code>和<code>defined CVAPI_EXPORTS</code>)<ol>
 <li>首先，<code>defined</code>的意义在于寻找后面的字段是否已经被宏定义过。</li>
 <li>其次，观察第一个表达式，发现<code>_WIN32</code> 在之前已经被定义过了，通过查阅<a href="https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=vs-2017" target="_blank" rel="noopener">微软官方宏定义文档</a>发现这个字段作用是基于编译器一个信号，表明是Windows环境下编译及运行的程序。<br><figure class="image-bubble">
@@ -275,9 +275,12 @@
 <li><code>elif defined __GNUC__ &amp;&amp; __GNUC__ &gt;= 4</code><br><code>define CV_EXPORTS __attribute__((visibility(&quot;default&quot;)))</code><br>这两句涉及的主要有两个功能: 1. <a href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html" target="_blank" rel="noopener">判断是否为GCC编译环境</a> 2. <a href="https://blog.csdn.net/mutourenzhang/article/details/47803803" target="_blank" rel="noopener">为全局动态库函数设置非隐藏声明</a><br>对于第一点，类似于分析第一条，可以知道这句的意思便是检查gcc并测试是否高于4.0.0版本(猜测与c++标准有关)</li>
 </ol>
 </li>
-<li><code>void</code><br>函数返回值，这里返回值为空</li>
-<li><code>GaussianBlur</code><br>函数名，这里因为是声明所以是跟源码的函数一样，可以很快找到源码定义。</li>
-<li><code>()</code><br>括号里面的是函数参数根据上面的说明注释，便可解读出这个函数所有参数意义:<ul>
+<li><p><code>void</code><br>函数返回值，这里返回值为空</p>
+</li>
+<li><p><code>GaussianBlur</code><br>函数名，这里因为是声明所以是跟源码的函数一样，可以很快找到源码定义。</p>
+</li>
+<li><p><code>()</code><br>括号里面的是函数参数根据上面的说明注释，便可解读出这个函数所有参数意义:</p>
+<ul>
 <li><code>src</code>  这是输入图像，这个图像可以拥有任意数量的通道，这些通道是独立处理的，但深度应该是CV_8U，CV_16U，CV_16S，CV_32F或CV_64F。</li>
 <li><code>dst</code> 这是输出图像，大小与类型与src相同。</li>
 <li><code>ksize</code> 这是卷积核的大小参数(是数字desu)。其中ksize.width和ksize.height可以不同，但是它们必须是一个正奇数(或者零)，并且您不用担心卷积核内部参数问题，卷积核会根据sigma来计算。</li>
@@ -456,8 +459,8 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-07-11T13:34:51.677Z"
-        itemprop="dateUpdated">2020-07-11 21:34:51</time>
+    最后更新时间：<time datetime="2020-07-20T03:01:37.114Z"
+        itemprop="dateUpdated">2020-07-20 11:01:37</time>
 </span><br>
 
 
