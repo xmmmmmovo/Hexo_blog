@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.fivezha.cn/2020/07/21/github-action-demo/</loc>
+    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
     <lastmod>2020-07-22</lastmod>
   </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
-    <lastmod>2020-07-21</lastmod>
+    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/</loc>
+    <lastmod>2020-07-22</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/21/github-action-demo/</loc>
+    <lastmod>2020-07-22</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/</loc>
     <lastmod>2020-07-20</lastmod>
@@ -17,9 +20,6 @@
     <lastmod>2020-07-19</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2018/10/15/nazo-io-answer/</loc>
-    <lastmod>2020-07-18</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/</loc>
     <lastmod>2020-07-18</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/11/algorithm4th-1/</loc>
