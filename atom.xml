@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.fivezha.cn/"/>
-  <updated>2020-07-23T10:13:53.490Z</updated>
+  <updated>2020-07-23T13:34:44.654Z</updated>
   <id>http://blog.fivezha.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://blog.fivezha.cn/2020/07/23/algorithm4-1-threestackqueue/"/>
     <id>http://blog.fivezha.cn/2020/07/23/algorithm4-1-threestackqueue/</id>
     <published>2020-07-23T10:11:16.000Z</published>
-    <updated>2020-07-23T10:13:53.490Z</updated>
+    <updated>2020-07-23T13:34:44.654Z</updated>
     
-    <content type="html"><![CDATA[<p>第一次看见的前面就标有极难的题目<a id="more"></a></p><div id="echarts1933" style="width: 81%;height: 400px;margin: 0 auto"></div><script type="text/javascript">        // 基于准备好的dom，初始化echarts实例        var myChart = echarts.init(document.getElementById('echarts1933'));        // 指定图表的配置项和数据        var option = {    xAxis: {        type: 'category',        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']    },    yAxis: {        type: 'value'    },    series: [{        data: [820, 932, 901, 934, 1290, 1330, 1320],        type: 'line'    }]}        // 使用刚指定的配置项和数据显示图表。        myChart.setOption(option);</script>]]></content>
+    <content type="html"><![CDATA[<p>第一次看见的前面就标有极难的题目<a id="more"></a></p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>本问题其实是有一篇论文作为参考的:</p><div class="row">    <embed src="https://ecommons.cornell.edu/bitstream/handle/1813/6273/80-433.pdf" width="100%" height="550" type="application/pdf"></div><p>这篇论文是以<code>LISP</code>作为实现语言的，我们本次依旧是使用<code>kotlin</code>进行实现</p><h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2>]]></content>
     
     <summary type="html">
     
