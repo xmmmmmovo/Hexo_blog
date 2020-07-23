@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.fivezha.cn/"/>
-  <updated>2020-07-23T06:30:34.424Z</updated>
+  <updated>2020-07-23T10:13:53.490Z</updated>
   <id>http://blog.fivezha.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法(第四版)笔记(6)---如何利用三个栈使队列所有操作达到O(1)</title>
+    <link href="http://blog.fivezha.cn/2020/07/23/algorithm4-1-threestackqueue/"/>
+    <id>http://blog.fivezha.cn/2020/07/23/algorithm4-1-threestackqueue/</id>
+    <published>2020-07-23T10:11:16.000Z</published>
+    <updated>2020-07-23T10:13:53.490Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一次看见的前面就标有极难的题目<a id="more"></a></p><div id="echarts5522" style="width: 81%;height: 400px;margin: 0 auto"></div><script type="text/javascript">        // 基于准备好的dom，初始化echarts实例        var myChart = echarts.init(document.getElementById('echarts5522'));        // 指定图表的配置项和数据        var option = {    xAxis: {        type: 'category',        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']    },    yAxis: {        type: 'value'    },    series: [{        data: [820, 932, 901, 934, 1290, 1330, 1320],        type: 'line'    }]}        // 使用刚指定的配置项和数据显示图表。        myChart.setOption(option);</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一次看见的前面就标有极难的题目
+    
+    </summary>
+    
+    
+      <category term="algorithm4" scheme="http://blog.fivezha.cn/categories/algorithm4/"/>
+    
+    
+      <category term="kotlin" scheme="http://blog.fivezha.cn/tags/kotlin/"/>
+    
+      <category term="algorithm" scheme="http://blog.fivezha.cn/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>解决mathjax公式不换行问题</title>
