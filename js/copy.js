@@ -1,1 +1,17 @@
-"use strict";window,document,$(".highlight .code pre").before('<button class="btn-copy" data-clipboard-snippet="">  <i class="icon icon-copy"></i><span>Copy</span></button>'),new ClipboardJS(".btn-copy",{target:function(n){return n.nextElementSibling}});
+/*页面载入完成后，创建复制按钮*/
+!function (e, t, a) { 
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      //fa fa-globe可以去字体库替换自己想要的图标
+      copyHtml += '  <i class="icon icon-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      new ClipboardJS('.btn-copy', {
+          target: function(trigger) {
+              return trigger.nextElementSibling;
+          }
+      });
+    }
+    initCopyCode();
+  }(window, document);
