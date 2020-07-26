@@ -31,16 +31,7 @@
     <loc>http://blog.fivezha.cn/2019/09/12/lab-summer-question/</loc>
     <lastmod>2020-07-26</lastmod>
   </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/21/github-action-demo/</loc>
-    <lastmod>2020-07-26</lastmod>
-  </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/18/github-arctic/</loc>
-    <lastmod>2020-07-26</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2019/12/05/bank-algorithm/</loc>
-    <lastmod>2020-07-26</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/04/24/docker-note/</loc>
     <lastmod>2020-07-26</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2018/04/20/git-guide/</loc>
@@ -49,13 +40,19 @@
     <loc>http://blog.fivezha.cn/2020/07/24/github-action-blog/</loc>
     <lastmod>2020-07-26</lastmod>
   </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/21/github-action-demo/</loc>
+    <lastmod>2020-07-26</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2019/12/05/bank-algorithm/</loc>
+    <lastmod>2020-07-26</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/04/24/docker-note/</loc>
+    <lastmod>2020-07-26</lastmod>
+  </url>  <url>
     <loc>http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/</loc>
     <lastmod>2020-07-26</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/11/algorithm4th-1/</loc>
-    <lastmod>2020-07-26</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/13/algorithm4-linkedlist/</loc>
     <lastmod>2020-07-26</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/12/algorithm4-eval-int-arithmetic/</loc>
@@ -65,6 +62,9 @@
     <lastmod>2020-07-26</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
+    <lastmod>2020-07-26</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/13/algorithm4-linkedlist/</loc>
     <lastmod>2020-07-26</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2018/09/08/LaTeX-math-symbols/</loc>
