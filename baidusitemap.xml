@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.fivezha.cn/2020/04/29/socket-program-2/</loc>
-    <lastmod>2020-08-04</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/08/03/ts-random-test/</loc>
-    <lastmod>2020-08-04</lastmod>
-  </url>  <url>
     <loc>http://blog.fivezha.cn/2018/09/08/LaTeX-math-symbols/</loc>
     <lastmod>2020-08-04</lastmod>
   </url>  <url>
@@ -17,9 +11,6 @@
     <lastmod>2020-08-04</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2019/12/05/bank-algorithm/</loc>
-    <lastmod>2020-08-04</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/08/04/blog-post-notification/</loc>
     <lastmod>2020-08-04</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2020/04/24/docker-note/</loc>
@@ -58,6 +49,9 @@
     <loc>http://blog.fivezha.cn/2019/10/11/play-study-s/</loc>
     <lastmod>2020-08-04</lastmod>
   </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/04/29/socket-program-2/</loc>
+    <lastmod>2020-08-04</lastmod>
+  </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/31/algorithm4-1-binary-search/</loc>
     <lastmod>2020-08-04</lastmod>
   </url>  <url>
@@ -83,6 +77,9 @@
     <lastmod>2020-08-04</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/</loc>
+    <lastmod>2020-08-04</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/08/03/ts-random-test/</loc>
     <lastmod>2020-08-04</lastmod>
   </url>
 </urlset>
