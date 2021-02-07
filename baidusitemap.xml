@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.fivezha.cn/2018/09/08/LaTeX-math-symbols/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/12/algorithm4-eval-int-arithmetic/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2019/12/05/bank-algorithm/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/04/24/docker-note/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/08/23/fever-test/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
     <loc>http://blog.fivezha.cn/2020/12/11/final-project-wesite-bugs/</loc>
     <lastmod>2021-02-07</lastmod>
   </url>  <url>
@@ -67,18 +49,6 @@
     <loc>http://blog.fivezha.cn/2021/01/01/what-i-do-in-2020/</loc>
     <lastmod>2021-02-07</lastmod>
   </url>  <url>
-    <loc>http://blog.fivezha.cn/2021/01/26/a-week-with-macbookpro-m1/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/31/algorithm4-1-binary-search/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/11/algorithm4th-1/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
     <loc>http://blog.fivezha.cn/2020/07/18/github-arctic/</loc>
     <lastmod>2021-02-07</lastmod>
   </url>  <url>
@@ -94,16 +64,46 @@
     <loc>http://blog.fivezha.cn/2021/02/07/translation-Exploring-Dynamic-Dispatch-in-Rust/</loc>
     <lastmod>2021-02-07</lastmod>
   </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/23/algorithm4-1-threestackqueue/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
-    <loc>http://blog.fivezha.cn/2020/07/13/algorithm4-linkedlist/</loc>
-    <lastmod>2021-02-07</lastmod>
-  </url>  <url>
     <loc>http://blog.fivezha.cn/2019/02/25/gaussianbulr-analyze/</loc>
     <lastmod>2021-02-07</lastmod>
   </url>  <url>
     <loc>http://blog.fivezha.cn/2020/08/03/ts-random-test/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2018/09/08/LaTeX-math-symbols/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-1-4/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/12/algorithm4-eval-int-arithmetic/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2019/12/05/bank-algorithm/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/04/24/docker-note/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/08/23/fever-test/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2021/01/26/a-week-with-macbookpro-m1/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/31/algorithm4-1-binary-search/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/17/algorithm4-Josephus/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/11/algorithm4th-1/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/23/algorithm4-1-threestackqueue/</loc>
+    <lastmod>2021-02-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.fivezha.cn/2020/07/13/algorithm4-linkedlist/</loc>
     <lastmod>2021-02-07</lastmod>
   </url>
 </urlset>
